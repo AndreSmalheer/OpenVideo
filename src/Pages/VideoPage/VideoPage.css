@@ -60,6 +60,7 @@ body{
 }
 
 .main-video-player {
+    position: relative;
     border-radius: 16px;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -68,6 +69,71 @@ body{
     margin-bottom: clamp(12px, 2vw, 16px);
     max-width: 100%;
     min-height: 360px;
+}
+
+.video-container{
+    position: relative;
+}
+
+.main-video-player video{
+    background-color: #313244;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 20px);
+
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+
+    border-radius: 0 0 16px 16px;
+    opacity: 0;
+    transition: opacity 0.11;
+}
+
+.video-progress{
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background-color: rgb(49, 50, 68);
+  color: white;
+  border: none;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.video-progress::-webkit-progress-value {
+  background-color: #f9e2af;
+  border-radius: 3px;
+}
+
+.video-progress::-moz-progress-bar {
+  background-color: #fab387;
+  border-radius: 3px;
+}
+
+.play-btn{
+    width: 20px;
+    height: 20px;
+}
+
+.play-btn:hover{
+    cursor: pointer;
+}
+
+.video-container:hover .controls{
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .video-info {
@@ -93,6 +159,10 @@ body{
     gap: 0.125rem;
     font-size: 0.7rem;
     color: white;
+}
+
+.like-counter{
+    margin-right: 15px;
 }
 
 .like-container .like-icon:hover{
@@ -184,6 +254,12 @@ body{
     padding: 10px 12px;
     margin-bottom: 8px;
     cursor: pointer;
+    transition: transform 0.1s ease;
+
+}
+
+.recommended-video-card:hover{
+    transform: scale(1.02);
 }
 
 .recommended-video-title {
