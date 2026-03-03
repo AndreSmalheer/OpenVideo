@@ -247,18 +247,28 @@ body{
 }
 
 .recommended-video-card {
-    background: #24243a;
+    /* background: #24243a; */
     height: clamp(100px, 10vw, 141px);
     border-radius: 6px;
     padding: 10px 12px;
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 8px;
     cursor: pointer;
     transition: transform 0.1s ease;
-
+    display: flex;
+    gap: 12px;
 }
 
 .recommended-video-card:hover{
     transform: scale(1.02);
+}
+
+.recommended-video-thumbnail{
+    width: 70%;
+    border-radius: 16px;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .recommended-video-title {
@@ -266,6 +276,7 @@ body{
     color: #CDD6F4;
     font-size: 13px;
     line-height: 1.4;
+    max-width: 100%;
 }
 
 .no-recommended {

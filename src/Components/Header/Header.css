@@ -9,12 +9,34 @@
     align-items: center;
 }
 
-.Header h1 {
+.header-logo{
+    width: 40px;
+    height: auto;
     margin-left: clamp(10px, 2vw, 21px);
+    transition: transform 0.1s ease;
+
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.03);
+    }
+}
+
+.Header h1 {
+    margin-left: clamp(4px, 1.5vw, 10px);
     color: #CDD6F4;
 
     &:hover{
         cursor: pointer;
         color: #E6E9FF;
+    }
+}
+
+
+.text-highlight{
+    color: #f5bde6;
+
+    &:hover{
+        color: #ffd6f2;
     }
 }

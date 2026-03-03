@@ -4,6 +4,8 @@ import { getVideoInfo } from "../../utils/GetVideoInfo";
 import Header from "../../Components/Header/Header";
 import "./VideoPage.css";
 
+const invidous_url = "http://100.100.22.66:3000"
+
 export default function VideoPage() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
@@ -154,6 +156,7 @@ export default function VideoPage() {
           {videoData.recommendedVideos?.length > 0 ? (
             videoData.recommendedVideos.map((video) => (
               <div key={video.videoId} className="recommended-video-card">
+                <img className="recommended-video-thumbnail" src={invidous_url + video.videoThumbnails[0].url}></img>
                 <p className="recommended-video-title">{video.title}</p>
                 {/* <p className="recommended-video-id">{video.videoId}</p> */}
               </div>
