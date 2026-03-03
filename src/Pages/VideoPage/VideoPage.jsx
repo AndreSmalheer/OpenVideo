@@ -40,6 +40,7 @@ export default function VideoPage() {
       setLoading(false);
     }
     fetchVideo();
+    setProgress(0)
   }, [video_id]);
 
   useEffect(() => {
