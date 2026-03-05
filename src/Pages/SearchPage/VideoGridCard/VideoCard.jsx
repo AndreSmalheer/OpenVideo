@@ -1,12 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./VideoGridCard.css";
-import settings from "@/config/config.json"
+import config from "@/config/config"
 
-console.log(settings.apiUrl)
 export default function VideoCard({ video }) {
     const navigate = useNavigate()
-    const videoThumbnail = `${settings.apiUrl}${video.videoThumbnails[0].url}`;
+    const videoThumbnail = `${config.apiUrl}${video.videoThumbnails[0].url}`;
 
     return (
         <div key={video.videoId} id={video.videoId} className="video" onClick={() => navigate(`/Video?video_id=${video.videoId}`)}>

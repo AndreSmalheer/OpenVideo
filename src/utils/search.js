@@ -1,8 +1,8 @@
-import settings from "@/config/config.json"
+import config from "@/config/config"
 
 export async function search(query, page) {
     const fetchPage = async (q, p) => {
-        const url = new URL(`${settings.apiUrl}/api/v1/search`);
+        const url = new URL(`${config.apiUrl}/api/v1/search`);
         url.search = new URLSearchParams({ q, page: p }).toString();
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);

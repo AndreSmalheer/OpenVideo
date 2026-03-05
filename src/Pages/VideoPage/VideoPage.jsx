@@ -3,9 +3,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { getVideoInfo } from "../../utils/GetVideoInfo";
 import Header from "../../Components/Header/Header";
 import "./VideoPage.css";
-import settings from "@/config/config.json"
+import config from "@/config/config"
 
-const invidous_url = `${settings.apiUrl}`
+const invidous_url = `${config.apiUrl}`
 
 export default function VideoPage() {
   const location = useLocation();

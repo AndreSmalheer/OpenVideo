@@ -1,10 +1,10 @@
-import settings from "@/config/config.json"
+import config from "@/config/config"
 
 export async function getVideoInfo(videoId) {
     if (!videoId) return null;
 
     try {
-        const url = `${settings.apiUrl}/api/v1/videos/${videoId}`;
+        const url = `${config.apiUrl}/api/v1/videos/${videoId}`;
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
