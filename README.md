@@ -18,3 +18,31 @@ The UI is designed by me using the Caterpchine Mocha theme.
 
 ## What I Learned from This Project
 I learned the basics of React. While working on this project, I learned about useState and React Router.
+
+
+## Requirements
+- Node.js
+- npm
+- self hosted invidous instance
+
+## Installation
+
+Clone the repo
+```bash
+git clone https://github.com/AndreSmalheer/OpenVideo
+```
+
+Go into the project folder
+```bash
+cd OpenVideo
+```
+
+install the modules
+```bash
+npm install
+```
+
+Run the server
+```bash
+npm run dev
+```
