@@ -1,8 +1,8 @@
-const invidiousUrl = "http://100.100.22.66:3000";
+import settings from "@/config/config.json"
 
 export async function search(query, page) {
     const fetchPage = async (q, p) => {
-        const url = new URL(`${invidiousUrl}/api/v1/search`);
+        const url = new URL(`${settings.apiUrl}/api/v1/search`);
         url.search = new URLSearchParams({ q, page: p }).toString();
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
