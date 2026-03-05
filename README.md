@@ -37,9 +37,17 @@ Go into the project folder
 cd OpenVideo
 ```
 
-install the modules
+Install the modules
 ```bash
 npm install
+```
+
+Change the config in /src/config/config.json
+```bash
+{
+  "apiUrl": "http://locahost:3000"
+}
+
 ```
 
 Run the server
