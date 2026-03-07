@@ -78,6 +78,24 @@ body{
     background-color: #313244;
 }
 
+.video-container.fulscreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: #11111B;
+}
+
+.video-container.fulscreen video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+}
+
 .controls {
     position: absolute;
     bottom: 0;
@@ -95,6 +113,9 @@ body{
     border-radius: 0 0 16px 16px;
     opacity: 0;
     transition: opacity 0.11;
+
+    display: flex;
+    align-items: center;
 }
 
 .video-progress{
@@ -127,6 +148,17 @@ body{
 }
 
 .play-btn:hover{
+    cursor: pointer;
+}
+
+.fullscreen-btn{
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.fullscreen-btn:hover{
     cursor: pointer;
 }
 

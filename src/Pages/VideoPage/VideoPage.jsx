@@ -19,6 +19,7 @@ export default function VideoPage() {
   const [playing, setPlaying] = useState(false);
   const [likedText, setLikedText] = useState("");
   const [progress, setProgress] = useState(0);
+  const [fulscreen , setFulscreen] = useState(false)
 
   function formatNumber(num) {
     if (num >= 1_000_000_000) {
@@ -89,7 +90,7 @@ export default function VideoPage() {
         <div className="video-main-column">
           {videoData.formatStreams?.length > 0 && (
             <>
-              <div className="video-container">
+              <div className={`video-container ${fulscreen? "fulscreen" : ""}`}>
                 <video
                   id="main-video"
                   className="main-video-player"
@@ -104,6 +105,12 @@ export default function VideoPage() {
                     src={playing ? "/images/pause.png" : "/images/play.png"}
                     onClick={() => setPlaying(!playing)}
                   ></img>
+
+                  <img
+                    className="fullscreen-btn"
+                    src="/images/fullscreen.png"
+                    onClick={() => setFulscreen(!fulscreen)}
+                   ></img>
 
                   <progress
                     className="video-progress"
