@@ -9,6 +9,12 @@
     align-items: center;
 }
 
+@media (max-width: 768px) {
+  .Header {
+    height: auto;     
+  }
+}
+
 .header-logo{
     width: 40px;
     height: auto;
