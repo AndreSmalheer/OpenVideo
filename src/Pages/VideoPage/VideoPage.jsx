@@ -114,6 +114,7 @@ export default function VideoPage() {
                 <video
                   id="main-video"
                   className="main-video-player"
+                  playsInline
                   src={videoData.formatStreams[0].url}
                   onClick={() => setPlaying(!playing)}
                   autoPlay
